@@ -89,9 +89,31 @@ const game = {
   },
 };
 
-// /*
+/*
 ////////////////////////////////////
 // START Looping Arrays: The for-of loop
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
+
+for (const item of menu) console.log(item);
+
+// for (const item of menu.entries()) {
+//   console.log(`${item[0] + 1}: ${item[1]}`);
+// }
+
+//Destructure the above for-of
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
+
+// console.log([...menu.entries()]);
+
+////////////////////////////////////
+// END Looping Arrays: The for-of loop
+*/
+
+
 
 
 /*
