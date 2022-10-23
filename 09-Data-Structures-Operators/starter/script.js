@@ -1,7 +1,7 @@
 'use strict';
 
-const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
-const hours = {
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const openingHours = {
   [weekdays[3]]: {
     open: 12,
     close: 22,
@@ -32,27 +32,26 @@ const restaurant = {
   // openingHours: openingHours,
 
   // ES6 enhanced object literals
-  hours,
+  openingHours,
 
   // Destructuring object in function
-  orderDelivery({
-    starterIndex,
-    mainIndex,
-    time = '20:00',
-    address
-  }) {
-    console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+  orderDelivery({ starterIndex, mainIndex, time = '20:00', address }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
     // output:- Order received! Garlic Bread and Risotto will be delivered to Trivandrum at 22:30
   },
 
   orderPasta(ing1, ing2, ing3) {
-    console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`);
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`
+    );
   },
 
   orderPizza(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
-  }
+  },
 };
 
 const game = {
@@ -100,13 +99,47 @@ const game = {
 
 // /*
 ////////////////////////////////////
+// START Optional Chaining (?.)
+
+// optional chaining
+console.log(restaurant.openingHours?.mon?.open);
+console.log(restaurant.openingHours?.fri?.open);
+
+// Example
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+for (const day of days) {
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day} we open at ${open}`);
+}
+
+// Methods
+let order =
+  restaurant.orderPasta?.('onion', 'mushroom', 'olive') ??
+  'Method does not exists';
+console.log(order);
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exists');
+
+// Arrays
+const users = [{name: 'Vaishak', email: 'vaishak@gmail.com'}];
+// const users = [];
+console.log(users[0]?.name ?? 'User array is empty');
+
+
+////////////////////////////////////
+// END Optional Chaining (?.)
+// */
+
+
+/*
+////////////////////////////////////
 // START Enhanced object Literals
 
 console.log(restaurant);
 
 ////////////////////////////////////
 // END Enhanced object Literals
-// */
+*/
 
 
 
