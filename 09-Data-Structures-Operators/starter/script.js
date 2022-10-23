@@ -1,5 +1,22 @@
 'use strict';
 
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+const hours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays[2 + 4]]: {
+    open: 0, // Open 24 hours
+    close: 24,
+    [`day-${2+4}`]: 24, //new ES6 feature in object literals
+  },
+};
+
 // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
@@ -12,22 +29,13 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
+  // openingHours: openingHours,
+
+  // ES6 enhanced object literals
+  hours,
+
   // Destructuring object in function
-  orderDelivery: function ({
+  orderDelivery({
     starterIndex,
     mainIndex,
     time = '20:00',
@@ -37,16 +45,15 @@ const restaurant = {
     // output:- Order received! Garlic Bread and Risotto will be delivered to Trivandrum at 22:30
   },
 
-  orderPasta: function (ing1, ing2, ing3) {
+  orderPasta(ing1, ing2, ing3) {
     console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`);
   },
 
-  orderPizza: function (mainIngredient, ...otherIngredients) {
+  orderPizza(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
   }
 };
-
 
 const game = {
   team1: 'Bayern Munich',
@@ -88,6 +95,20 @@ const game = {
     team2: 6.5,
   },
 };
+
+
+
+// /*
+////////////////////////////////////
+// START Enhanced object Literals
+
+console.log(restaurant);
+
+////////////////////////////////////
+// END Enhanced object Literals
+// */
+
+
 
 /*
 ////////////////////////////////////
