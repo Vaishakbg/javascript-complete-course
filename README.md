@@ -21,7 +21,7 @@ ES5 -> ES6/ES2015 -> ES7/ES2016 -> ES8/ES2017 -> ES9/ES2018 -> ES10/ES2019 -> ES
     1. Object
     2. Array
 
-JavaScript has dynamic typing: We do not have to manually define the data type of the value stored in a variable. Instead, data types are determined automatically.
+    JavaScript has dynamic typing: We do not have to manually define the data type of the value stored in a variable. Instead, data types are determined automatically.
 
 #
 
@@ -54,7 +54,7 @@ JavaScript has dynamic typing: We do not have to manually define the data type o
 
 ### Scope And The Scope Chain
 
-***Scoping:*** How our program’s variables are organized and accessed. "Where do variables live?" or "Where can we access a certain variable, and where not?";
-***Lexical scoping:*** Scoping is controlled by placement of functions and blocks in the code;
-***Scope:*** Space or environment in which a certain variable is declared (variable environment in case of functions). There is ***global*** scope, ***function*** scope, and ***block*** scope;
+    ***Scoping:*** How our program’s variables are organized and accessed. "Where do variables live?" or "Where can we access a certain variable, and where not?";
+    ***Lexical scoping:*** Scoping is controlled by placement of functions and blocks in the code;
+    ***Scope:*** Space or environment in which a certain variable is declared (variable environment in case of functions). There is ***global*** scope, ***function*** scope, and ***block*** scope;
 1. Global Scope
