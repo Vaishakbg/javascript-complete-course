@@ -97,3 +97,5 @@ JavaScript has dynamic typing: We do not have to manually define the data type o
     }
     console.log(blockVariable); // Error: blockVariable is not defined outside the block
     ```
+
+![alt text](https://github.com/Vaishakbg/javascript-complete-course/blob/master/assets/images/scope-chain-vs-call-stack.png)
