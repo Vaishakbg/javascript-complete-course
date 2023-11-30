@@ -13,7 +13,7 @@ const openingHours = {
   [weekdays[2 + 4]]: {
     open: 0, // Open 24 hours
     close: 24,
-    [`day-${2+4}`]: 24, //new ES6 feature in object literals
+    [`day-${2 + 4}`]: 24, //new ES6 feature in object literals
   },
 };
 
@@ -197,7 +197,26 @@ console.log(restaurant);
 ////////////////////////////////////
 // END Enhanced object Literals
 */
+const a = 'John';
+first();
 
+function first() {
+  const b = "first!";
+  second();
+  console.log(b);
+
+  function second() {
+    const c = "Second!";
+    third();
+    console.log(c);
+  }
+}
+
+function third() {
+  const d = "third!"
+  console.log(d);
+  console.log( d + c + b + a);
+}
 
 
 /*
@@ -229,7 +248,7 @@ for (const [i, el] of menu.entries()) {
 
 /*
 ////////////////////////////////////
-// START Coding Challenge #1 
+// START Coding Challenge #1
 
 // 1.
 const [player1, player2] = game.players;
@@ -266,7 +285,7 @@ team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
 
 ////////////////////////////////////
-// END Coding Challenge #1 
+// END Coding Challenge #1
 */
 
 /*
@@ -483,15 +502,15 @@ restaurant.orderDelivery({
 });
 
 // START ###################
-// Destructuring Object *************************** 
+// Destructuring Object ***************************
 
 const {
   name,
   openingHours,
   categories
 } = restaurant;
-console.log(name); // output:- Classico Italiano 
-console.log(openingHours); // output:- {thu: {…}, fri: {…}, sat: {…}} 
+console.log(name); // output:- Classico Italiano
+console.log(openingHours); // output:- {thu: {…}, fri: {…}, sat: {…}}
 console.log(categories); // output:- (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
 
 // Custom variable names for objects
@@ -500,8 +519,8 @@ const {
   openingHours: hours,
   categories: tags
 } = restaurant;
-console.log(restaurantName); // output:- Classico Italiano 
-console.log(hours); // output:- {thu: {…}, fri: {…}, sat: {…}} 
+console.log(restaurantName); // output:- Classico Italiano
+console.log(hours); // output:- {thu: {…}, fri: {…}, sat: {…}}
 console.log(tags); // output:- (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
 
 // Object with default value
