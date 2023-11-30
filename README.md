@@ -23,29 +23,29 @@ ES5 -> ES6/ES2015 -> ES7/ES2016 -> ES8/ES2017 -> ES9/ES2018 -> ES10/ES2019 -> ES
 
 JavaScript has dynamic typing: We do not have to manually define the data type of the value stored in a variable. Instead, data types are determined automatically.
 
------
+---
 
 ### Reviewing Functions
 
 1. Function declaration
 
-Function that can be used before it’s declared.
-```javascript
-function calcAge(birthYear) {
-    return 2037 - birthYear;
-}
-```
+    Function that can be used before it’s declared.
+    ```javascript
+    function calcAge(birthYear) {
+        return 2037 - birthYear;
+    }
+    ```
 2. Function expression
 
-Essentially a function value stored in a variable
-```javascript
-const calcAge = function (birthYear) {
-    return 2037 - birthYear;
-}
-```
+    Essentially a function value stored in a variable
+    ```javascript
+    const calcAge = function (birthYear) {
+        return 2037 - birthYear;
+    }
+    ```
 3. Arrow function
 
-Great for a quick one-line functions. Has no this keyword
-```javascript
-const calcAge = (birthYear) => 2037 - birthYear;
-```
+    Great for a quick one-line functions. Has no this keyword
+    ```javascript
+    const calcAge = (birthYear) => 2037 - birthYear;
+    ```
