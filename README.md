@@ -21,7 +21,7 @@ ES5 -> ES6/ES2015 -> ES7/ES2016 -> ES8/ES2017 -> ES9/ES2018 -> ES10/ES2019 -> ES
     1. Object
     2. Array
 
-    JavaScript has dynamic typing: We do not have to manually define the data type of the value stored in a variable. Instead, data types are determined automatically.
+JavaScript has dynamic typing: We do not have to manually define the data type of the value stored in a variable. Instead, data types are determined automatically.
 
 #
 
@@ -60,9 +60,10 @@ ES5 -> ES6/ES2015 -> ES7/ES2016 -> ES8/ES2017 -> ES9/ES2018 -> ES10/ES2019 -> ES
 
    ***Scope:*** Space or environment in which a certain variable is declared (variable environment in case of functions). There is ***global*** scope, ***function*** scope, and ***block*** scope;
 
-1. Global Scope
+<strong>1. Global Scope</strong>
     * Outside of any function or block
     * Variables declared in global scope are accessible everywhere
+
     ```javascript
     const name = 'John';
     const age = 26;
@@ -71,6 +72,7 @@ ES5 -> ES6/ES2015 -> ES7/ES2016 -> ES8/ES2017 -> ES9/ES2018 -> ES10/ES2019 -> ES
 2. Function Scope
     * Variables are accessible only inside function, NOT outside
     * Also called local scope
+
     ```javascript
     function calcAge (birthYear) {
         const now = 2037;
