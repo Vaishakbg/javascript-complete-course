@@ -197,26 +197,7 @@ console.log(restaurant);
 ////////////////////////////////////
 // END Enhanced object Literals
 */
-const a = 'John';
-first();
 
-function first() {
-  const b = "first!";
-  second();
-  console.log(b);
-
-  function second() {
-    const c = "Second!";
-    third();
-    console.log(c);
-  }
-}
-
-function third() {
-  const d = "third!"
-  console.log(d);
-  console.log( d + c + b + a);
-}
 
 
 /*
@@ -597,3 +578,34 @@ console.log(p, q, r); // output:- 8 9 0
 */
 // END ###################
 // Destructuring Array *************************** */
+
+
+
+////////////////////////////////////
+// Scope concept
+
+// const a = 'John';
+// first();
+
+// function first() {
+//   const b = "first!";
+//   second();
+//   console.log(b);
+
+//   function second() {
+//     const c = "Second!";
+//     third();
+//     console.log(c);
+//   }
+// }
+
+// function third() {
+//   const d = "third!"
+//   console.log(d);
+//   console.log( d + c + b + a);
+// }
+myName('Vaishak')
+function myName(name) {
+  console.log(msg,name);
+  let msg = 'My Name is';
+}

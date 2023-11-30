@@ -98,4 +98,36 @@ JavaScript has dynamic typing: We do not have to manually define the data type o
     console.log(blockVariable); // Error: blockVariable is not defined outside the block
     ```
 
-![alt text](https://github.com/Vaishakbg/javascript-complete-course/blob/master/assets/images/scope-chain-vs-call-stack.png)
+![alt text](https://github.com/Vaishakbg/javascript-complete-course/blob/master/assets/images/scope-chain-vs-call-stack.png);
+
+#
+
+### Hoisting in Javascript
+
+Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase. This means that you can use a variable or call a function even before it is declared in your code. However, it's important to note that only the declarations are hoisted, not the initializations.
+
+1. **Variable Hoisting:**
+    ```javascript
+    console.log(x); // undefined
+    var x = 5;
+    console.log(x); // 5
+    ```
+    In the example above, the declaration `var x;` is hoisted to the top of its scope during compilation, but the initialization (x = 5;) remains in place. So, when console.log(x); is encountered, x exists but is undefined.
+
+2. **Function Hoisting:**
+    ```javascript
+    hello(); // "Hello, hoisted function!"
+
+    function hello() {
+    console.log("Hello, hoisted function!");
+    }
+    ```
+3. **Function Expression Hoisting:**
+    ```javascript
+    expression(); // Error: expression is not a function
+
+    var expression = function() {
+    console.log("I am a function expression");
+    };
+    expression(); // "I am a function expression"
+    ```
