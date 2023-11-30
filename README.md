@@ -27,7 +27,7 @@ JavaScript has dynamic typing: We do not have to manually define the data type o
 
 ### Reviewing Functions
 
-1. Function declaration
+1. **Function declaration**
 
     Function that can be used before it’s declared.
     ```javascript
@@ -60,7 +60,7 @@ JavaScript has dynamic typing: We do not have to manually define the data type o
 
    ***Scope:*** Space or environment in which a certain variable is declared (variable environment in case of functions). There is ***global*** scope, ***function*** scope, and ***block*** scope;
 
-<strong>1. Global Scope</strong>
+1. ***Global Scope***
     * Outside of any function or block
     * Variables declared in global scope are accessible everywhere
 
@@ -69,7 +69,7 @@ JavaScript has dynamic typing: We do not have to manually define the data type o
     const age = 26;
     const year = 1992;
     ```
-2. Function Scope
+2. ***Function Scope***
     * Variables are accessible only inside function, NOT outside
     * Also called local scope
 
@@ -82,7 +82,7 @@ JavaScript has dynamic typing: We do not have to manually define the data type o
 
     console.log(now); // ReferenceError
     ```
-3. Block Scope (ES6)
+3. ***Block Scope (ES6)***
     * Variables are accessible only inside block (block scoped)
     * HOWEVER, this only applies to ***let*** and ***const*** variables!
     * Functions are also block scoped (only in strict mode)
