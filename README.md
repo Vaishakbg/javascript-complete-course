@@ -63,10 +63,32 @@ ES5 -> ES6/ES2015 -> ES7/ES2016 -> ES8/ES2017 -> ES9/ES2018 -> ES10/ES2019 -> ES
 1. Global Scope
     * Outside of any function or block
     * Variables declared in global scope are accessible everywhere
+    ```javascript
+    const name = 'John';
+    const age = 26;
+    const year = 1992;
+    ```
 2. Function Scope
     * Variables are accessible only inside function, NOT outside
     * Also called local scope
+    ```javascript
+    function calcAge (birthYear) {
+        const now = 2037;
+        const age = now - birthYear;
+        return age;
+    }
+
+    console.log(now); // ReferenceError
+    ```
 3. Block Scope (ES6)
     * Variables are accessible only inside block (block scoped)
     * HOWEVER, this only applies to ***let*** and ***const*** variables!
     * Functions are also block scoped (only in strict mode)
+
+    ```javascript
+    if (true) {
+        let blockVariable = 'I am in a block';
+        console.log(blockVariable); // Accessible here
+    }
+    console.log(blockVariable); // Error: blockVariable is not defined outside the block
+    ```
