@@ -112,7 +112,7 @@ Hoisting is a JavaScript behavior where variable and function declarations are m
     var x = 5;
     console.log(x); // 5
     ```
-    In the example above, the declaration `var x;` is hoisted to the top of its scope during compilation, but the initialization (x = 5;) remains in place. So, when console.log(x); is encountered, x exists but is undefined.
+    In the example above, the declaration `var x;` is hoisted to the top of its scope during compilation, but the initialization (`x = 5;`) remains in place. So, when `console.log(x);` is encountered, `x` exists but is `undefined`.
 
 2. **Function Hoisting:**
     ```javascript
@@ -122,6 +122,8 @@ Hoisting is a JavaScript behavior where variable and function declarations are m
     console.log("Hello, hoisted function!");
     }
     ```
+    In this example, the entire function declaration is hoisted, including its body. So, when `hello();` is called before the function declaration, it works as expected.
+
 3. **Function Expression Hoisting:**
     ```javascript
     expression(); // Error: expression is not a function
@@ -131,3 +133,14 @@ Hoisting is a JavaScript behavior where variable and function declarations are m
     };
     expression(); // "I am a function expression"
     ```
+    In contrast to function declarations, function expressions are not hoisted in the same way. In the example above, if you try to call `expression();` before the variable declaration, it will result in an error.
+
+4. **var vs let/const:**
+    ```javascript
+    console.log(foo); // undefined
+    var foo = "I am a variable";
+
+    console.log(bar); // Error: bar is not defined
+    let bar = "I am a variable";
+    ```
+    In this example, the `var` declaration is hoisted, so `console.log(foo);` doesn't throw an error, but it logs `undefined`. On the other hand, `let` declarations are also hoisted but not initialized until the declaration statement, so trying to access `bar` before the declaration results in an error.
